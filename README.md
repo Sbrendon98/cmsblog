@@ -9,13 +9,13 @@ A blog website using GraphQL, NextJs, and GraphCMS
 ## | Road Map
 | Tasks                                     	| Completion 	|
 |-------------------------------------------	|------------	|
-| Design Home Page                          	| 40%       	|
-| Design [slug].js Page                      	| 10%       	|
-| Query GraphCMS to Home Page SlideShow 	    | 0%       	|
-| Query and Render [slug].js Page           	| 0%        	|
-|                                            	| 0%         	|
-
+| Design Home Page                          	| 60%       	|
+| Design [slug].js Page                      	| 30%       	|
+| Query GraphCMS to Home Page SlideShow 	    | 100%       	|
+| Query and Render [slug].js Page           	| 100%        	|
+| Design SlideShow in index.js                  | 0%         	|
+| Design SlideSHow in [slug].js                 | 0%            |
 
 ## | Milestones
 
-### 
+### Queried Data to Both the Home Page and [slug].js Page

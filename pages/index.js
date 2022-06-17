@@ -1,7 +1,39 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from "next/image"
-export default function Home() {
+import SlideShowCard from '../components/SlideShow'
+import { gql, GraphQLClient } from 'graphql-request'
+
+const endpoint = 'https://api-us-east-1.graphcms.com/v2/cl3smw9s5ahr701z66qij4y0f/master'
+
+const graphCMS = new GraphQLClient(endpoint)
+
+const allEntries = gql`
+{
+  posts(orderBy: publishedDate_DESC) {
+    title
+    slug
+    id
+    publishedDate
+    coverPhoto {
+      url
+    }
+  }
+}
+
+`
+export async function getStaticProps() {
+  const { posts } = await graphCMS.request(allEntries)
+  console.log(JSON.stringify(posts))
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10
+  }
+}
+
+export default function Home({posts}) {
   return (
     <div className="flex flex-col bg-mainBackground p-0">
       <Head>
@@ -24,7 +56,10 @@ export default function Home() {
         <h2 className='text-white'>RecentBlogs</h2>
         <div className="BlogSlideShow">
           {/* THis section is where the slideshows need to be and we will need to query them from GraphCMS */}
-          </div>
+          {posts.map((post) => (
+            <SlideShowCard title={post.title} slug={post.slug} key={post.id} coverPhoto={post.coverPhoto} />
+          ))}
+        </div>
       </div>
       <div className="min-h-screen flex-col">
         <h1 className="text-white">Hello From Index.js</h1>
