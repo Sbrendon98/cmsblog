@@ -67,7 +67,7 @@ export default function SingleBlogPage({ singlePost }) {
             <h1>{title}</h1>
             <h2>{publishedDate}</h2>
             <img src={coverPhoto.url} />
-            <img src={author.profilePicture.url} />
+            {/* <img src={author.profilePicture.url} /> */}
             <p>{article.markdown}</p>
         </div>
 

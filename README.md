@@ -14,7 +14,8 @@ A blog website using GraphQL, NextJs, and GraphCMS
 | Query GraphCMS to Home Page SlideShow 	    | 100%       	|
 | Query and Render [slug].js Page           	| 100%        	|
 | Design SlideShow in index.js                  | 0%         	|
-| Design SlideSHow in [slug].js                 | 0%            |
+| Design SlideShow in [slug].js                 | 0%            |
+| Final Maintenance                             | 0%            |
 
 ## | Milestones
 
