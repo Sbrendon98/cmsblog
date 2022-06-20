@@ -56,7 +56,7 @@ export default function Home({ posts }) {
 
       </div>
       <div className="flex flex-col mt-20 m-auto w-[1309px]">
-        <h2 className='text-white'>RecentBlogs</h2>
+        <h2 className='font-Train text-[64px] text-white'>RecentBlogs</h2>
         <div className="flex space-x-4 overflow-x-auto w-1309">
           {/* THis section is where the slideshows need to be and we will need to query them from GraphCMS */}
           {posts.map((post) => (
